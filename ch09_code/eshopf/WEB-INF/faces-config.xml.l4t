@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS ENTITY="JSFProcess">
+ <PROCESS-ITEM ENTITY="JSFProcessGroup" NAME="rules:" SHAPE="32,17,0,0">
+  <PROCESS-ITEM ENTITY="JSFProcessItem" ID="rules::0" NAME="item">
+   <PROCESS-ITEM-OUTPUT ENTITY="JSFProcessItemOutput"
+    ID="listBooks::#jsp#ListBooks.jspx" NAME="output"
+    PATH="/jsp/ListBooks.jspx" TARGET="rules:#jsp#ListBooks.jspx" TITLE="listBooks"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ENTITY="JSFProcessGroup" NAME="rules::1" SHAPE="32,129,0,0">
+  <PROCESS-ITEM ENTITY="JSFProcessItem" ID="rules::1" NAME="item">
+   <PROCESS-ITEM-OUTPUT ENTITY="JSFProcessItemOutput"
+    ID="showBook::#jsp#BookDetails.jspx" NAME="output"
+    PATH="/jsp/BookDetails.jspx" TARGET="rules:#jsp#BookDetails.jspx" TITLE="showBook"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ENTITY="JSFProcessGroup" NAME="rules::2" SHAPE="32,241,0,0">
+  <PROCESS-ITEM ENTITY="JSFProcessItem" ID="rules::2" NAME="item">
+   <PROCESS-ITEM-OUTPUT ENTITY="JSFProcessItemOutput"
+    ID="showCart::#jsp#ShoppingCart.jspx" NAME="output"
+    PATH="/jsp/ShoppingCart.jspx" TARGET="rules:#jsp#ShoppingCart.jspx" TITLE="showCart"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ENTITY="JSFProcessGroup" NAME="rules::3" SHAPE="32,353,0,0">
+  <PROCESS-ITEM ENTITY="JSFProcessItem" ID="rules::3" NAME="item">
+   <PROCESS-ITEM-OUTPUT ENTITY="JSFProcessItemOutput"
+    ID="checkOut::#jsp#Checkout.jspx" NAME="output"
+    PATH="/jsp/Checkout.jspx" TARGET="rules:#jsp#Checkout.jspx" TITLE="checkOut"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ENTITY="JSFProcessGroup" NAME="rules::4" SHAPE="32,465,0,0">
+  <PROCESS-ITEM ENTITY="JSFProcessItem" ID="rules::4" NAME="item">
+   <PROCESS-ITEM-OUTPUT ENTITY="JSFProcessItemOutput"
+    ID="orderConfirmation::#jsp#OrderConfirmation.jspx" NAME="output"
+    PATH="/jsp/OrderConfirmation.jspx"
+    TARGET="rules:#jsp#OrderConfirmation.jspx" TITLE="orderConfirmation"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ENTITY="JSFProcessGroup"
+  NAME="rules:#jsp#OrderConfirmation.jspx"
+  PATH="/jsp/OrderConfirmation.jspx" SHAPE="240,593,0,0"/>
+ <PROCESS-ITEM ENTITY="JSFProcessGroup"
+  NAME="rules:#jsp#ShoppingCart.jspx" PATH="/jsp/ShoppingCart.jspx" SHAPE="240,369,0,0"/>
+ <PROCESS-ITEM ENTITY="JSFProcessGroup"
+  NAME="rules:#jsp#BookDetails.jspx" PATH="/jsp/BookDetails.jspx" SHAPE="32,689,0,0"/>
+ <PROCESS-ITEM ENTITY="JSFProcessGroup" NAME="rules:#jsp#Checkout.jspx"
+  PATH="/jsp/Checkout.jspx" SHAPE="240,481,0,0"/>
+ <PROCESS-ITEM ENTITY="JSFProcessGroup" NAME="rules:#jsp#ListBooks.jspx"
+  PATH="/jsp/ListBooks.jspx" SHAPE="256,33,0,0"/>
+</PROCESS>

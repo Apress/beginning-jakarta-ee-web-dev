@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:c="http://java.sun.com/jsp/jstl/core"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  version="2.1"
+  >
+<jsp:directive.page
+  language="java"
+  contentType="application/xhtml+xml;charset=UTF-8"
+  />
+<f:subview id="leftMenu">
+  <h:panelGrid styleClass="menu">
+    <h:panelGroup styleClass="box">
+      <h:outputText styleClass="box_title" value="Quick Search"/>
+      <h:outputText styleClass="box_p" value="Book Title/Author:"/>
+      <h:inputText size="15"
+          styleClass="box_searchTxt"
+          binding="#{shopManager.searchTxt}"
+          />
+      <h:commandButton
+          type="submit" value="Search"
+          styleClass="box_searchBtn"
+          action="#{shopManager.searchBooks}"
+          immediate="true"
+          />
+      </h:panelGroup>
+    <h:panelGroup styleClass="box" id="categBox">
+      <h:outputText styleClass="box_title" value="Categories"/>
+      <h:dataTable value="#{shopManager.categories}" var="category">
+        <h:column>
+          <h:commandLink
+              action="#{shopManager.selectCategory}"
+              value="#{category.name}"
+              immediate="true"
+              />
+          </h:column>
+        </h:dataTable>
+      </h:panelGroup>
+    </h:panelGrid>
+  </f:subview>
+</jsp:root>

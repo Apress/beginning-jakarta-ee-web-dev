@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+  <description>My library of tag files</description>
+  <tlib-version>1.0</tlib-version>
+  <short-name>wow</short-name>
+  <uri>tagFiles</uri>
+  <tag-file>
+    <description>Displays the day of the week</description>
+    <display-name>weekday</display-name>
+    <name>weekday</name>
+    <path>/WEB-INF/tags/weekday.tag</path>
+    </tag-file>
+  </taglib>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:c="http://java.sun.com/jsp/jstl/core"
+  xmlns:x="http://java.sun.com/jsp/jstl/xml"
+  version="2.1"
+  >
+<jsp:directive.page
+  language="java"
+  contentType="application/xhtml+xml;charset=UTF-8"
+  />
+<jsp:output omit-xml-declaration="false"/>
+<jsp:output
+  doctype-root-element="html"
+  doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+  doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+  />
+<c:import url="starfleet.xml" var="sf"/>
+<x:parse doc="${sf}" varDom="dom"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Parsing starfleet.xml</title>
+  <style>th {text-align:left}</style>
+  </head>
+<body>
+<table border="1">
+  <tr><th>Name</th><th>S/N</th><th>Class</th><th>Year</th><th>Captain</th></tr>
+  <x:forEach var="tag" select="$dom//starship">
+    <tr>
+      <td><x:out select="$tag/@name"/></td>
+      <td><x:out select="$tag/@sn"/></td>
+      <td><x:out select="$tag/class"/></td>
+      <td><x:out select="$tag/class/@commissioned"/></td>
+      <td><x:out select="$tag/captain"/></td>
+      </tr>
+    </x:forEach>
+  </table>
+</body>
+</html>
+</jsp:root>

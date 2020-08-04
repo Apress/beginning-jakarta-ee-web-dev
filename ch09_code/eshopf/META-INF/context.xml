@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- MySQL database context -->
+<!DOCTYPE Context [<!ELEMENT Context ANY> <!ATTLIST Context debug CDATA #IMPLIED
+  reloadable CDATA #IMPLIED crossContext CDATA #IMPLIED>]>
+<Context debug="5" reloadable="true" crossContext="true">
+  <Resource
+      name="jdbc/mysql"
+      auth="Container"
+      type="javax.sql.DataSource"
+      username="root"
+      password="root"
+      driverClassName="com.mysql.cj.jdbc.Driver"
+      url="jdbc:mysql://localhost:3306/shop?serverTimezone=UTC"
+      maxActive="8"
+      maxIdle="4"
+      />
+  <Valve
+      className="org.apache.catalina.valves.AccessLogValve"
+      directory="logs"
+      prefix="eshopf-access."
+      suffix=".log"
+      pattern="common"
+      resolveHosts="false"
+      />
+  </Context>

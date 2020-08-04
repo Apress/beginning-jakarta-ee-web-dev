@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  version="2.1"
+  >
+<jsp:directive.page
+  language="java"
+  contentType="application/xhtml+xml;charset=UTF-8"
+  />
+<jsp:output omit-xml-declaration="false"/>
+<jsp:output
+  doctype-root-element="html"
+  doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+  doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+  />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>First Page</title></head>
+<body>
+<f:view>
+  <h:form>
+    <h:outputText value="Type something here: "/>
+    <h:inputText value="#{aStringBean.str}" />
+    <h:commandButton action="goOn" value="Submit" />
+    </h:form>
+  </f:view>
+</body>
+</html>
+</jsp:root>

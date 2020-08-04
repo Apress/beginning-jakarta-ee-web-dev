@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>Example of input form</title>
+  <style type="text/css">
+    td.h {font-size: 120%; font-weight: bold}
+    </style>
+  </head>
+<body>
+<form name="nameForm" action="" method="GET">
+  <input type="hidden" name="agent" value="007"/>
+  <table  cellpadding="5" border="1" rules="all">
+    <tr>
+      <td class="h">Element</td><td class="h">Attribute</td>
+      <td class="h">Result</td></tr>
+    <tr>
+      <td>input</td><td>type="text"</td>
+      <td><input type="text" name="t"/></td>
+      </tr>
+    <tr>
+      <td>input</td><td>type="password"</td>
+      <td><input type="password" name="p"/></td>
+      </tr>
+    <tr>
+      <td>input</td><td>type="checkbox"</td>
+      <td>
+        <input type="checkbox" value="a" name="abc">A</input>
+        <input type="checkbox" value="b" name="abc">B</input>
+        <input type="checkbox" value="c" name="abc">C</input>
+        </td>
+      </tr>
+    <tr>
+      <td>input</td><td>type="radio"</td>
+      <td>
+        <input type="radio" name="yn" value="y">yes</input>
+        <input type="radio" name="yn" value="n">no</input>
+        </td>
+      </tr>
+   <tr>
+      <td>input</td><td>type="submit"</td>
+      <td><input type="submit" value="Submit" /></td>
+      </tr>
+    <tr>
+      <td>input</td><td>type="reset"</td>
+      <td><input type="reset" value="Reset"/></td>
+      </tr>
+    <tr>
+      <td>input</td><td>type="button"</td>
+      <td><input type="button" value="click me" name="b"/></td>
+      </tr>
+    <tr>
+      <td>textarea</td><td></td>
+      <td><textarea name="ta">Default text</textarea></td>
+      </tr>
+    <tr>
+      <td>fieldset</td><td></td>
+      <td><fieldset>
+        <legend>Dimensions:</legend>
+        Width <input type="text" size="3" name="w"/>
+        Height <input type="text" size="3" name="h"/>
+        </fieldset></td>
+      </tr>
+    <tr>
+      <td>select / option</td><td></td>
+      <td><select name="food">
+        <option value="pizza">Pizza</option>
+        <option value="spaghetti" selected>Spaghetti</option>
+        </select></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

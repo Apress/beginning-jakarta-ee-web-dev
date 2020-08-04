@@ -1,0 +1,207 @@
+body { /*********** body ***********/
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, Arial;
+  }
+.center {
+  text-align: center;
+  }
+a.link1 {
+  font-size: 12px;
+  color: #002252;
+  text-decoration: none;
+  font-weight: normal;
+  }
+a.link1:hover {
+  color: #002252;
+  text-decoration: underline;
+  }
+a.link2 {
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: normal;
+  }
+a.link2:hover {
+  color: #000000;
+  }
+p.error {
+  font-family: Tahoma;
+  font-size: 14px;
+  color: #ff2200;
+  text-align: center;
+  }
+p.info {
+  font-family: Tahoma;
+  font-size: 14px;
+  color: #002244;
+  text-align: center;
+  }
+.header { /*********** Top bar ***********/
+  width: 900px;
+  height: 90px;
+  background: url(/eshop/images/bg_header.gif) no-repeat top left;
+  margin: 0px;
+  padding: 0px;
+  border-top: 0px;
+  border-bottom: 5px #eeeeee solid;
+  }
+.logo {
+  float: left;
+  margin: 0px;
+  padding: 30px 0px 20px 20px;
+  border: 0px;
+  text-align: center;
+  }
+.logo p {
+  font-family: sans-serif;
+  font-size: 26px;
+  display: inline;
+  color: #ffffff;
+  }
+.cart {
+  border: 0px;
+  float: right;
+  padding: 20px 20px 10px 0px;
+  margin: 0px;
+  }
+.cart a:visited {
+  text-color: #000000;
+  }
+.cart p {
+  display: inline;
+  vertical-align: middle;
+  }
+.cart img {
+  padding: 0px;
+  margin: 0px;
+  vertical-align: middle;
+  }
+.menu { /*********** Left bar ***********/
+  width: 180px;
+  border: 1px #cccccc solid;
+  background: url(/eshop/images/bg_menu.gif) repeat-y top left;
+  margin: 0px;
+  padding: 20px 0 10px 10px;
+  float: left;
+  clear: both;
+  }
+.menu ul {
+  font-family: Verdana;
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+  list-style-type: none;
+  }
+.menu li {
+  font-size: 12px;
+  padding: .2em;
+  }
+.menu li.title {
+  border: 0px;
+  font-family: Arial;
+  font-size: 16px;
+  color: #ffffff;
+  padding: .2em;
+  margin: 0px;
+  background: url(/eshop/images/menubar.gif) repeat-x bottom left;
+  }
+.menu li a {
+  font-family: Arial;
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+  }
+.menu li a:hover {
+  color: #0000FF;
+  }
+.box {
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+  }
+.box p {
+  font-size: 12px;
+  padding: .2em 1em .2em 1em;
+  margin: 0px;
+  border: 0px;
+  }
+.box .title {
+  border: 0px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: #002252;
+  padding: .2em;
+  margin: 0px;
+  }
+.box a {
+  font-size: 12px;
+  color: #000000;
+  text-decoration: none;
+  }
+.box a:hover {
+  color: #000000;
+  text-decoration: underline;
+  }
+.box input#text {
+  font-size: 12px;
+  padding: .2em;
+  margin: .5em .8em .5em .8em;
+  border: 1px #000000 solid;
+  }
+.box input#submit {
+  padding: 0 .2em 0 .2em;
+  margin: .2em .8em .2em .8em;
+  text-align: left;
+  }
+.content { /*********** Content ***********/
+  float: left;
+  width: 700px;
+  border: 0px;
+  padding: 10px;
+  overflow: hidden;
+  }
+.content p {
+  font-size: 14px;
+  }
+.content h1 {
+  text-align: center;
+  font-family: Verdana;
+  font-size: 18px;
+  border: 0px;
+  }
+.content h2 {
+  text-align: right;
+  font-family: Verdana;
+  font-size: 16px;
+  color: #002252;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 0px 0px 20px 0px;
+  margin: 0px;
+  border: 0px;
+  }
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0px;
+  padding: 0px;
+  }
+.content table th {
+  padding: .5em;
+  font-size: 12px;
+  background: #fafafa;
+  color: #000000;
+  border-bottom: 1px #cccccc solid ;
+  text-align: left;
+  }
+.content table td {
+  padding: .5em;
+  font-size: 12px;
+  }
+.content table td#total {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: 1px #cccccc solid;
+  text-align: right;
+  }
+  

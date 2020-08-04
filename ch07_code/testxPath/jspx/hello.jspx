@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:c="http://java.sun.com/jsp/jstl/core"
+  xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+  version="2.1"
+  >
+<jsp:directive.page
+  language="java"
+  contentType="application/xhtml+xml;charset=UTF-8"
+  />
+<jsp:output omit-xml-declaration="false"/>
+<jsp:output
+  doctype-root-element="html"
+  doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+  doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+  />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Hello World in XHTML</title></head>
+<body>
+  <jsp:text>Hello World!</jsp:text>
+  <br/>
+  <jsp:text>User-agent: </jsp:text>
+  <c:set var="usAg" value="${header['user-agent']}"/>
+  <c:out value="${usAg}" />  
+</body>
+</html>
+</jsp:root>

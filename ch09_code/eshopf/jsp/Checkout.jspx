@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:c="http://java.sun.com/jsp/jstl/core"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:eshop="urn:jsptld:/WEB-INF/tlds/eshop.tld"
+  version="2.1"
+  >
+<jsp:directive.page
+  language="java"
+  contentType="application/xhtml+xml;charset=UTF-8"
+  />
+<jsp:output omit-xml-declaration="false"/>
+<jsp:output
+  doctype-root-element="html"
+  doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+  doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+  />
+<c:url var="cssUrl" value="/css/eshopf.jspx"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Check Out</title>
+  <link rel="stylesheet" href="${cssUrl}" type="text/css"/>
+  </head>
+<body>
+  <f:view>
+    <h:form id="form">
+      <jsp:include page="TopMenu.jspx" flush="true"/>
+      <jsp:include page="LeftMenu.jspx" flush="true"/>
+      <h:panelGrid styleClass="content">
+        <h:outputText styleClass="content content_h2" value="CheckOut"/>
+<!--  
+        <eshop:inputEntry id="nameEntry" label="Contact Name" required="true"
+            value="#{shopManager.contactName}"
+            errorStyleClass="error" requiredMessage="Value is required!"
+            />
+-->
+        <h:outputText
+            rendered="#{shopManager.shoppingCartEmpty}"
+            styleClass="error block"
+            value="ERROR: You can't check out an empty shopping cart !!!"
+            />
+        <h:panelGrid columns="3" rendered="#{!shopManager.shoppingCartEmpty}"
+            style="width:auto">
+          <f:facet name="header">
+            <h:outputText value="Delivery and Credit Card Details"/>
+            </f:facet>
+          <h:outputText value="Contact Name"/>
+          <h:inputText id="name" required="true"
+              value="#{shopManager.customer.contactName}"
+              requiredMessage="Value is required!"
+              />
+          <h:message for="name" styleClass="error"/>
+
+          <h:outputText value="Delivery Address"/>
+          <h:inputText id="address" required="true"
+              value="#{shopManager.customer.deliveryAddress}"
+              requiredMessage="Value is required!"
+              />
+          <h:message for="address" styleClass="error"/>
+          <h:outputText value="Name on Credit Card"/>
+          <h:inputText id="ccname" required="true"
+              value="#{shopManager.customer.ccName}"
+              requiredMessage="Value is required!"
+              />
+          <h:message for="ccname" styleClass="error"/>
+          <h:outputText value="Credit Card Number"/>
+          <h:inputText id="ccnumber" required="true"
+              value="#{shopManager.customer.ccNumber}"
+              converter="CCNumberConverter"
+              requiredMessage="Value is required!"
+              validatorMessage="Only 15 or 16 digits accepted!"
+              >
+            <f:validateLength minimum="15" maximum="16"/>
+            </h:inputText>
+          <h:message for="ccnumber" styleClass="error"/>
+          <h:outputText value="Credit Card Expiry Date (MM/YY)"/>
+          <h:inputText id="ccexpiry" required="true"
+              value="#{shopManager.customer.ccExpiryDate}"
+              requiredMessage="Value is required!"
+              >
+            <f:validator validatorId="CCExpiryValidator"/>
+            </h:inputText>
+          <h:message for="ccexpiry" styleClass="error"/>
+          <h:outputText value=" "/>
+          <h:commandButton value="Confirm Order" action="#{shopManager.checkOut}"/>
+        </h:panelGrid>
+      </h:panelGrid>
+    </h:form>
+  </f:view>
+</body>
+</html>
+</jsp:root>

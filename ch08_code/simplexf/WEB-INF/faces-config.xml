@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+	version="2.3">
+	<managed-bean>
+		<managed-bean-name>aStringBean</managed-bean-name>
+		<managed-bean-class>AString</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>str</property-name>
+			<property-class>java.lang.String</property-class>
+			<null-value></null-value>
+		</managed-property>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>/first.jspx</from-view-id>
+		<navigation-case>
+			<from-outcome>goOn</from-outcome>
+			<to-view-id>/second.jspx</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/second.jspx</from-view-id>
+		<navigation-case>
+			<from-outcome>goBack</from-outcome>
+			<to-view-id>/first.jspx</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

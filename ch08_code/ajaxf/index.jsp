@@ -1,0 +1,1 @@
+<html><body><jsp:forward page="/ajaxf.jsf"/></body></html>

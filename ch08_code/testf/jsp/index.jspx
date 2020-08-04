@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  version="2.1"
+  >
+<jsp:directive.page
+  language="java"
+  contentType="application/xhtml+xml;charset=UTF-8"
+  />
+<jsp:output omit-xml-declaration="false"/>
+<jsp:output
+  doctype-root-element="html"
+  doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+  doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+  />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Test</title></head>
+<body><f:view><h:form id="form">
+  <h:panelGrid columns="2" border="1" cellpadding="5">
+
+    <h:outputText value="h:selectBooleanCheckbox"/>
+    <h:panelGroup>
+      <h:selectBooleanCheckbox id="checkbox" value="#{myBean.oneValue}"/>
+      <h:outputText value=" just a checkbox"/>
+      </h:panelGroup>
+
+    <h:outputText value="h:selectManyCheckbox"/>
+    <h:selectManyCheckbox id="checkboxes" value="#{myBean.choices1}">
+      <f:selectItems value="#{myBean.selects}"/>
+      <f:selectItem itemLabel="everything" itemValue="42"/>
+      </h:selectManyCheckbox>
+
+    <h:outputText value="h:selectManyListbox"/>
+    <h:selectManyListbox id="listboxes" value="#{myBean.choices2}">
+      <f:selectItems value="#{myBean.selects}"/>
+      <f:selectItem itemLabel="too much" itemValue="999"/>
+      </h:selectManyListbox>
+
+    <h:outputText value="h:selectManyMenu"/>
+    <h:selectManyMenu id="menus" value="#{myBean.choices3}"
+        style="min-height:48px">
+      <f:selectItems value="#{myBean.selects}"/>
+      <f:selectItem itemLabel="ninenty-nine" itemValue="99"/>
+      </h:selectManyMenu>
+
+    <h:outputText value="h:selectOneListbox"/>
+    <h:selectOneListbox id="listbox" value="#{myBean.choice1}">
+      <f:selectItems value="#{myBean.selects}"/>
+      <f:selectItem itemLabel="nine" itemValue="9"/>
+      </h:selectOneListbox>
+
+    <h:outputText value="h:selectOneMenu"/>
+    <h:selectOneMenu id="menu" value="#{myBean.choice2}">
+      <f:selectItem itemLabel="zero" itemValue="0"/>
+      <f:selectItems value="#{myBean.selects}"/>
+      </h:selectOneMenu>
+
+    <h:outputText value="h:selectOneRadio"/>
+    <h:selectOneRadio id="radio" value="#{myBean.choice3}">
+      <f:selectItem itemLabel="nothing" itemValue="-1"/>
+      <f:selectItems value="#{myBean.selects}"/>
+      </h:selectOneRadio>
+
+    </h:panelGrid>
+    <h:commandButton value="Submit"/>
+  </h:form></f:view></body>
+</html>
+</jsp:root>

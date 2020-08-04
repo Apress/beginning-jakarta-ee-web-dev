@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+	<description>Example of a simple tag library</description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>wow</short-name>
+	<tag>
+		<description>Displays the day of the week</description>
+		<display-name>weekday</display-name>
+		<name>weekday</name>
+		<tag-class>tags.WeekdayTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>date</name>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>			
+		</attribute>
+	</tag>
+	<tag>
+		<description>Displays the day of the week</description>
+		<display-name>weekdayBody</display-name>
+		<name>weekdayBody</name>
+		<tag-class>tags.WeekdayBodyTag</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+</taglib>

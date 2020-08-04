@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:c="http://java.sun.com/jsp/jstl/core"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  version="2.1"
+  >
+<jsp:directive.page
+  language="java"
+  contentType="application/xhtml+xml;charset=UTF-8"
+  />
+<f:subview id="viewcart">
+  <h:panelGroup styleClass="header">
+    <h:outputText styleClass="logo" value="e-Shopping Center"/>
+    <h:commandLink action="showCart" immediate="true" styleClass="cart link2">
+      <h:outputText value="Show Cart "/>
+      <h:graphicImage url="/images/cart.gif"/>
+      </h:commandLink>
+    </h:panelGroup>
+  </f:subview>
+</jsp:root>

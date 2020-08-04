@@ -1,0 +1,9 @@
+<!ELEMENT starfleet (title,starship*)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT starship (class,captain)>
+<!ATTLIST
+    starship name CDATA #REQUIRED
+    sn CDATA #REQUIRED>
+<!ELEMENT class EMPTY>
+<!ATTLIST class name CDATA #REQUIRED>
+<!ELEMENT captain (#PCDATA)>

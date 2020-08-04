@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+
+<h:head>
+  <title>
+    <ui:insert name="title">Default Title</ui:insert>
+    </title>
+  <h:outputStylesheet name="styles.css" library="css"/>
+</h:head>
+
+<h:body>
+<f:view>
+  <ui:insert name="header">
+    <ui:include src="/templates/defaults/header.xhtml"/>
+    </ui:insert>
+  <h:form>
+    <h:outputText value="Page "/>
+    <ui:insert name="pageNum"/>
+    <h:outputText value=" has received &quot;#{aStringBean.str}&quot; "/>
+    <h:commandButton action="goBack" value="Back to first page"/>
+    </h:form>
+</f:view>
+</h:body>
+</html>

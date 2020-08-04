@@ -1,0 +1,1 @@
+This is inside the text file text.txt

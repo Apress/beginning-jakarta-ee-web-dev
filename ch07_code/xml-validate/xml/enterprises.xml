@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE starfleet SYSTEM "http://localhost:8080/xml-validate/dtd/starfleet.dtd">
+<starfleet>
+	<title>The two most famous starships in the fleet</title>
+	<starship name="USS Enterprise" sn="NCC-1701">
+		<class name="Constitution" />
+		<captain>James Tiberius Kirk</captain>
+	</starship>
+	<starship name="USS Enterprise" sn="NCC-1701-D">
+		<class name="Galaxy" />
+		<captain>Jean-Luc Picard</captain>
+	</starship>
+</starfleet>

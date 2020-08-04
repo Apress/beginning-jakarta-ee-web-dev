@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root
+  xmlns:jsp="http://java.sun.com/JSP/Page"
+  xmlns:c="http://java.sun.com/jsp/jstl/core"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  version="2.0"
+  >
+<jsp:directive.page
+  language="java"
+  contentType="application/xhtml+xml;charset=UTF-8"
+  />
+<jsp:output omit-xml-declaration="false"/>
+<jsp:output
+  doctype-root-element="html"
+  doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+  doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+  />
+<c:url var="cssUrl" value="/css/eshopf.jspx"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Book details</title>
+  <link rel="stylesheet" href="${cssUrl}" type="text/css"/>
+  </head>
+<body>
+  <f:view>
+    <h:form>
+      <jsp:include page="TopMenu.jspx" flush="true"/>
+      <jsp:include page="LeftMenu.jspx" flush="true"/>
+      <h:panelGrid styleClass="content">
+        <h:outputText styleClass="content content_h2" value="Book details"/>
+        <h:panelGroup
+            styleClass="error block"
+            rendered="#{shopManager.book == null}"
+            >
+          <h:outputText value="Invalid book identifier!"/>
+          </h:panelGroup>
+        <h:panelGrid columns="2" rendered="#{shopManager.book != null}">
+          <h:graphicImage id="bookImg"
+              value="/images/#{shopManager.book.id}.jpg"/>
+          <h:panelGroup>
+            <h:outputText style="font-weight: bolder"
+                value="#{shopManager.book.title}"/><br/>
+            <h:outputText value="#{shopManager.book.author}"/><br/>
+            <h:outputText value="Price: #{shopManager.book.price}"/>
+            </h:panelGroup>
+          <h:outputText value=" "/>
+          <h:panelGrid styleClass="wide" style="text-align: right">
+            <h:commandLink id="addToCart" value="Add to Cart"
+                action="#{shopManager.addToCart}" styleClass="link1"
+                />
+            </h:panelGrid>
+          </h:panelGrid>
+        </h:panelGrid>
+      </h:form>
+    </f:view>
+  </body>
+</html>
+</jsp:root>

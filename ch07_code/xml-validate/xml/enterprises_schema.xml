@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<starfleet
+    xmlns="http://localhost:8080/xml-validate/xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://localhost:8080/xml-validate/xsd 
+    					http://localhost:8080/xml-validate/xsd/starfleet.xsd"
+    >
+  <title>The two most famous starships in the fleet</title>
+  <starship name="USS Enterprise" sn="NCC-1701">
+    <class name="Constitution"/>
+    <captain>James Tiberius Kirk</captain>
+    </starship>
+  <starship name="USS Enterprise" sn="NCC-1701-D">
+    <class name="Galaxy"/>
+    <captain>Jean-Luc Picard</captain>
+    </starship>
+  </starfleet>

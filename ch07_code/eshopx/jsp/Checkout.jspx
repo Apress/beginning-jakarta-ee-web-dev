@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root
+  xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+  xmlns:c="http://java.sun.com/jsp/jstl/core"
+  xmlns:jsp="http://java.sun.com/JSP/Page"  
+  xmlns:eshop="urn:jsptld:/WEB-INF/tlds/eshop.tld"
+  version="2.1"
+  >
+<jsp:directive.page
+  language="java"
+  contentType="application/xhtml+xml;charset=UTF-8"
+  />
+<jsp:output omit-xml-declaration="false"/>
+<jsp:output
+  doctype-root-element="html"
+  doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+  doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+  />
+<c:url var="cssUrl" value="/css/eshop.jspx"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Check Out</title>
+  <link rel="stylesheet" href="${cssUrl}" type="text/css"/>
+  </head>
+<body>
+<jsp:include page="TopMenu.jspx" flush="true"/>
+<jsp:include page="LeftMenu.jspx" flush="true"/>
+<div class="content">
+  <h2>CheckOut</h2>
+  <c:choose>
+    <c:when test="${fn:length(shoppingCart) > 0}">
+      <form action="">
+        <input type="hidden" name="action" value="orderConfirmation"/>
+        <table class="checkout">
+          <tr>
+            <th colspan="2">Delivery Details</th>
+            </tr>
+          <tr>
+            <td>Contact Name:</td>
+            <td><input type="text" name="contactName"/></td>
+            </tr>
+          <tr>
+            <td>Delivery Address:</td>
+            <td><input type="text" name="deliveryAddress"/></td>
+            </tr>
+          <tr>
+            <th colspan="2">Credit Card Details</th>
+            </tr>
+          <tr>
+            <td>Name on Credit Card:</td>
+            <td><input type="text" name="ccName"/></td>
+            </tr>
+          <tr>
+            <td>Credit Card Number:</td>
+            <td><input type="text" name="ccNumber"/></td>
+            </tr>
+          <tr>
+            <td>Credit Card Expiry Date:</td>
+            <td><input type="text" name="ccExpiryDate"/></td>
+            </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" value="Confirm Order"/></td>
+            </tr>
+          </table>
+        </form>
+      </c:when>
+    <c:otherwise>
+      <p class="error">ERROR: You can't check out an empty shopping cart!</p>
+      </c:otherwise>
+    </c:choose>
+  </div>
+</body>
+</html>
+</jsp:root>
