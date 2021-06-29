@@ -1,8 +1,8 @@
 # Errata for *Book Title*
 
-On **page xx** [Summary of error]:
+On **page 97, line 11 from bottom of page** [code error]:
  
-Details of error here. Highlight key pieces in **bold**.
+session.getValue must be session.getAttribute
 
 ***
 
