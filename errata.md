@@ -1,4 +1,4 @@
-# Errata for *Book Title*
+# Errata for *Beginning Jakarta EE Web Development*
 
 On **page 97, line 11 from bottom of page** [code error]:
  
