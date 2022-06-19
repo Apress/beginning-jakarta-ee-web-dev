@@ -4,9 +4,9 @@
 <head>
   <title>E-Bookshop Checkout</title>
   <style type="text/css">
-    body {background-color:gray; font-size=10pt;}
-    H1 {font-size:20pt;}
-    table {background-color:white;}
+    body {background-color: gray; font-size: 10pt;}
+    h1 {font-size: 20pt;}
+    table {background-color: white;}
     </style>
   </head>
 <body>
