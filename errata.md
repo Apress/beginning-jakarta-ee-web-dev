@@ -8,7 +8,7 @@ session.getValue must be session.getAttribute
 
 On **page 97 & 106, In the CSS style block for index.jsp and Checkout.jsp** [CSS syntax error]:
  
-font-size=10pt; in an invalid CSS expression should be **font-size: 10pt;**
+font-size=10pt; is an invalid CSS expression should be **font-size: 10pt;**
 
 ***
 
