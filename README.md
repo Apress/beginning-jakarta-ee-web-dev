@@ -5,7 +5,7 @@ This repository accompanies [*Beginning Jakarta EE Web Development*](https://www
 [comment]: #cover
 ![Cover image](9781484258651.jpg)
 
-Download the files as a zip using the green button, or clone the repository to your machine using Git.
+Download the files as a zip using the green button, or clone the repository to your machine using Git or Gitbash.
 
 ## Releases
 
